@@ -34,4 +34,9 @@ app.use((err, req, res, next) => {
   res.status(status).json({ message });
 });
 
+app.get('/', (req, res) => {
+  res.send('Slim Mom API is running');
+});
+
+
 module.exports = app;
