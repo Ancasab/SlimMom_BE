@@ -1,29 +1,40 @@
-## GoIT Node.js Course Template Homework
+# Slim-mom-backend
 
-Realizează un fork al acestui repozitoriu pentru a îndeplini temele de acasă (2-6). Fork-ul va crea un repozitoriu pe contul tău de pe http://github.com
+This REST API allows you to calculate the daily calorie intake and keep track of the number of calories eaten per day. You can also get a list of products not recommended for consumption.
 
-Adaugă mentorul la colaborare.
+This REST API is used as a backend for [slim-mom-frontend](https://andrii-posternak.github.io/slim-mom-frontend/) ([github](https://github.com/Andrii-Posternak/slim-mom-frontend))
 
-Pentru fiecare temă, creează un branch separat.
+## Usage
 
-- hw02
-- hw03
-- hw04
-- hw05
-- hw06
+For ease of use, you can refer to the [documentation](https://slim-mom-backend-tf5k.onrender.com/api/docs)
 
-Fiecare branch nou pentru fiecare temă trebuie să fie derivat din branch-ul principal (master).
+This REST API uses these endpoints:
 
-După ce ai terminat lucrul la tema de acasă în branch-ul tău, trebuie să creezi un pull request (PR). Apoi, adaugă mentorul pentru revizuirea codului. Abia după ce mentorul aprobă PR-ul, poți face "merge" a branch-ului cu tema de acasă în branch-ul master.
+Base URL: `https://slim-mom-backend-tf5k.onrender.com/api`
 
-Citește cu atenție comentariile mentorului. Corectează observațiile și fă un "commit" în branch-ul cu tema de acasă. Modificările se vor reflecta automat în PR după ce trimiți "commit"-ul cu corecțiile pe GitHub. După corectare, adaugă din nou mentorul pentru revizuirea codului.
+- **POST** `/auth/register` - create a new user
+- **POST** `/auth/login` - log in in user
+- **GET** `/auth/logout` - log out user
 
-- La predarea temei de acasă, este furnizat un link către PR.
-- Codul JavaScript este curat și ușor de înțeles, iar pentru formatare se folosește Prettier.
+- **GET** `/users/current` - get user info
 
-### Comenzi:
+- **GET** `/products/:date` - get all user's eaten products per day
+- **GET** `/products/?productName=productName` - search product in DB
+- **DELETE** `/products/:productId` - delete eaten product
+- **POST** `/products` - add a new eaten product
+- **POST** `/calories` - get a calorie count and non-recommended foods for unregistered user
+- **POST** `/calories/auth` - get a calorie count and non-recommended foods for registered user
 
-- `npm start` &mdash; pornește serverul în modul production.
-- `npm run start:dev` &mdash; pornește serverul în modul dezvoltare (development).
-- `npm run lint` &mdash; rulează verificarea codului cu ESLint, este necesar să se ruleze înaintea fiecărui PR și să se corecteze toate erorile linterului.
-- `npm lint:fix` &mdash; aceeași verificare a linterului, dar cu corecții automate pentru erorile simple.
+To run on localhost use the following commands:
+
+- `npm start` - start server in production mode
+- `npm run start:dev` - start server in development mode
+- `npm run lint` - run a code check execution with eslint
+- `npm run lint:fix` - run a code check run with eslint with automatic fixes for simple errors
+
+## Created with
+
+:white_check_mark: Node.js  
+:white_check_mark: Mongo DB  
+:white_check_mark: Express  
+:white_check_mark: Swagger
