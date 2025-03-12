@@ -1,16 +1,14 @@
-# Slim-mom-backend
+# SlimMom-BE
 
 This REST API allows you to calculate the daily calorie intake and keep track of the number of calories eaten per day. You can also get a list of products not recommended for consumption.
 
-This REST API is used as a backend for [slim-mom-frontend](https://andrii-posternak.github.io/slim-mom-frontend/) ([github](https://github.com/Andrii-Posternak/slim-mom-frontend))
+This REST API is used as a backend for [SlimMom-frontend](https://github.com/Ancasab/SlimMom-frontend) ([github](https://github.com/Ancasab/SlimMom-frontend))
 
 ## Usage
 
-For ease of use, you can refer to the [documentation](https://slim-mom-backend-tf5k.onrender.com/api/docs)
-
 This REST API uses these endpoints:
 
-Base URL: `https://slim-mom-backend-tf5k.onrender.com/api`
+Base URL: `https://slimmom-be-vtbp.onrender.com/api`
 
 - **POST** `/auth/register` - create a new user
 - **POST** `/auth/login` - log in in user
@@ -36,5 +34,4 @@ To run on localhost use the following commands:
 
 :white_check_mark: Node.js  
 :white_check_mark: Mongo DB  
-:white_check_mark: Express  
-:white_check_mark: Swagger
+:white_check_mark: Express
