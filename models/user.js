@@ -1,3 +1,32 @@
+// {
+//   "_id": {
+//     "$oid": "67d13da62c91ea0df7435d75"
+//   },
+//   "name": "Petra",
+//   "email": "petra.marin@yahoo.com",
+//   "password": "$2b$10$rRrsktxFFefN8l3fuBhL9OQPvDpBlZKvHkmw6rX/HihMukLQAgs7q",
+//   "height": 173,
+//   "age": 30,
+//   "currentWeight": 68,
+//   "desiredWeight": 65,
+//   "bloodType": 2,
+//   "dailyRate": 1420,
+//   "notRecFood": [
+//     "Cheese Paladin Mozzarella",
+//     "Bread sticks Manifesto with rye taste",
+//     ......
+//     "lamb",
+//     "Lamb (square)"
+//   ],
+//   "createdAt": {
+//     "$date": "2025-03-12T07:54:14.869Z"
+//   },
+//   "updatedAt": {
+//     "$date": "2025-03-13T09:06:07.866Z"
+//   },
+//   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDEzZGE2MmM5MWVhMGRmNzQzNWQ3NSIsImlhdCI6MTc0MTg1Njc2NywiZXhwIjoxNzQxODYwMzY3fQ.HDTPwbHQt2lhCBcSVUdl80NvDGY-xOAMS9xkLmSlk50"
+// }
+
 const { Schema, model } = require("mongoose");
 
 const userSchema = new Schema(
@@ -50,10 +79,8 @@ const userSchema = new Schema(
       default: null,
     },
     notRecFood: {
-      type: Array,
-      title: {
-        type: String,
-      },
+      type: [String],
+      default: [],
     },
   },
   { versionKey: false, timestamps: true }
