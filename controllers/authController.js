@@ -74,8 +74,14 @@ const login = async (req, res, next) => {
       user: {
         name: existingUser.name,
         email: existingUser.email,
+        height: existingUser.height,
+        age: existingUser.age,
+        currentWeight: existingUser.currentWeight,
+        desiredWeight: existingUser.desiredWeight,
+        bloodType: existingUser.bloodType,
         dailyRate: existingUser.dailyRate,
         notRecFood: existingUser.notRecFood,
+
       },
     });
   } catch (error) {
